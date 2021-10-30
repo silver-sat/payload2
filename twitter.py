@@ -12,5 +12,5 @@ def make_twitter_status_for_photo():
 def send_photo_tweet(message,image_filename):
     pass
 
-def send_text_tweet(message)
+def send_text_tweet(message):
     pass
