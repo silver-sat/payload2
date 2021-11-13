@@ -6,7 +6,7 @@ IPIN3 = 21
 OPIN1 = 17
 OPIN2 = 27
 OPIN3 = 22
-PINS = [PIN1, PIN2, PIN3]
+IPINS = [IPIN1, IPIN2, IPIN3]
 OPINS = [OPIN1, OPIN2, OPIN3]
 
 
@@ -14,7 +14,7 @@ def pinsetup():
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     
-    for pin in PINS:
+    for pin in IPINS:
         GPIO.setup(pin, GPIO.IN)
 
     for pin in OPINS:
@@ -22,15 +22,15 @@ def pinsetup():
         
         
 
-def opins(*PINS):
-    for pin in PINS:
+def opins(*OPINS):
+    for pin in OPINS:
         GPIO.output(pin, GPIO.HIGH)
 
         
         
-def triplevoting(*PINS):
+def triplevoting(*IPINS):
     count = 0
-    for pin in PINS:
+    for pin in IPINS:
         if GPIO.input(pin) == GPIO.HIGH:
             count += 1
 
