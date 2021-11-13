@@ -14,7 +14,7 @@ print(triplevoting(IPIN1, IPIN2, IPIN3))
 
 
 if triplevoting(IPIN1, IPIN2, IPIN3) == GPIO.HIGH:
-    print("take photo")
+    print("tweet")
 
 else:
-    print("tweet")
+    print("take photo")
